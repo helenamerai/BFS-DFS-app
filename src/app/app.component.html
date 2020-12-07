@@ -1,0 +1,34 @@
+<div class="main-container">
+  <div class="maze-container">
+    <div class="bfs">
+      <div class="title">
+        <span>{{type === 'bfs'? 'Breadth' : 'Depth'}}-First Search</span>
+      </div>
+      <canvas id='graph'></canvas>
+      <div class="button">
+        <button (click)="onRunClick('bfs')" [ngClass]="{'button-click': type === 'bfs'}">BFS</button>
+        <button (click)="onRunClick('dfs')" [ngClass]="{'button-click': type === 'dfs'}">DFS</button>
+      </div>
+    </div>
+    <div class="legend-container">
+      <ul class="Legend">
+        <li class="Legend-item">
+          <span class="colorBox" style="background-color: yellow;"></span>
+          <span class="label">Start</span>
+        </li>
+        <li class="Legend-item">
+          <span class="colorBox" style="background-color: #0f0;"></span>
+          <span class="label">End</span>
+        </li>
+        <li class="Legend-item">
+          <span class="colorBox" style="background-color: #FBD7F0;"></span>
+          <span class="label">Visited Nodes</span>
+        </li>
+        <li class="Legend-item">
+          <span class="colorBox" style="background-color: red;"></span>
+          <span class="label">Shortest Path</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
